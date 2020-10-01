@@ -113,7 +113,6 @@ const cocktails = [
             "sucré"
         ]
     },
-​
 ];
 
 module.exports = cocktails;

@@ -1,0 +1,23 @@
+{
+  "name": "revisions-cocktail-sebich",
+  "version": "1.0.0",
+  "description": "## Express",
+  "main": "cocktails.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Lyra-JS/revisions-cocktail-sebich.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Lyra-JS/revisions-cocktail-sebich/issues"
+  },
+  "homepage": "https://github.com/O-clock-Lyra-JS/revisions-cocktail-sebich#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
