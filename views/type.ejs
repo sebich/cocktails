@@ -1,0 +1,23 @@
+<%- include('partials/header', {
+    title: 'Type de cocktail'
+}) %>
+
+<body>
+    <nav>
+          <a href="/">Liste des cocktails</a>
+    </nav>
+
+    <section class="cocktails">
+      <h1>Cocktails</h1>
+      <div class="box">
+          <% listOfTypes.forEach(cocktail => { %>
+              <div class="boxDetail">
+                  <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>"></a>
+                  <h3><%= cocktail.name %></h3>
+              </div>
+          <% }); %>
+      </div>
+  </section>
+</body>
+
+<%- include('partials/footer') %>

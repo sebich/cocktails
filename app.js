@@ -2,7 +2,7 @@ const express = require ('express');
 
 const app = express();
 
-const router = require('./my_modules/router');
+const router = require('./router/index');
 
 app.set('view engine', 'ejs');
 // app.set('views', './views');

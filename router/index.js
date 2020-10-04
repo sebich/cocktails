@@ -12,7 +12,6 @@ router.get('/', (_, response) => {
 
     response.render('index', {
         cocktails,
-
     })
 });
 
@@ -20,7 +19,7 @@ router.get('/cocktail/:id', (request, response) => {
     const id = request.params.id;
 
     const selectedCocktail = cocktails.find(cocktail => {
-        return id === cocktail.name
+        return cocktail.name === id
     });
     
     if (!selectedCocktail) {
@@ -36,18 +35,35 @@ router.get('/cocktail/:id', (request, response) => {
 router.get('/type/:typeName', (request, response) => {
     const typeName = request.params.typeName;
 
-    const selectedType = cocktails.filter(type => {
-        return typeName === type.name
+    const listOfTypes = cocktails.filter(cocktail => {
+        return cocktail.type === typeName
     });
     
-    console.log(selectedType)
-    if (!selectedType) {
+    // console.log(listOfTypes)
+    if (!listOfTypes) {
         response.status(404).render('404');
         return;
     }
 
-    response.render('typeName', {
-        type: selectedType,
+    response.render('type', {
+        listOfTypes,
+    });
+});
+
+router.get('/type/cocktail/:id', (request, response) => {
+    const id = request.params.id;
+
+    const selectedCocktail = cocktails.find(cocktail => {
+        return cocktail.name === id
+    });
+    
+    if (!selectedCocktail) {
+        response.status(404).render('404');
+        return;
+    }
+
+    response.render('cocktail', {
+        cocktail: selectedCocktail,
     });
 });
 

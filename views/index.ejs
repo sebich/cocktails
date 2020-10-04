@@ -3,21 +3,32 @@
 }) %>
 
 <body>
-    <h1>Liste de coktails</h1>
-    <ul>
-        <% cocktails.forEach(cocktail => { %>
-            <li><a href="cocktail/<%= cocktail.name %>"><%= cocktail.name %></a></li>
-        <% }); %>
-    </ul> 
+    <section class="cocktails">
+        <h1>Cocktails</h1>
+        <div class="box">
+            <% cocktails.forEach(cocktail => { %>
+                <div class="boxDetail">
+                    <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>"></a>
+                    <h3><%= cocktail.name %></h3>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    <section>
+        <h1>Types</h1>
 
-    <h1>Liste de cocktails par types</h1>
+        <ul>
+            <% cocktails.forEach(cocktail => { %>
+            <% const type = [cocktail.type]%>
+            <% console.log (type) %>
+            <% const type2 = []; %>
+            <% const arrayType = type.concat(type2); %>
+            <% console.log (arrayType) %>
+            <li><a href="type/<%= cocktail.type %>"><%= cocktail.type %></a></li>
+            <% }); %>
 
-    <ul>
-        <% cocktails.forEach(cocktail => { %>
-            <li><a href="typeName/<%= cocktail.type %>"><%= cocktail.type %></a></li>
-        <% }); %>
-
-    </ul> 
+        </ul>
+    </section>
 </body>
 
 <%- include('partials/footer') %>
