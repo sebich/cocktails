@@ -1,13 +1,21 @@
 <%- include('partials/header', {
     title: '404 page !'
 }) %>
-
 <body>
+    <header>
+        <div class="header">
+            <img src="https://www.neondesigns.nl/media/neon-catalog-teaser.jpg" alt="logo cocktail" class="logo">
+            <h1 class= "title-header">MAKE YOUR COCKTAIL</h1>
+            <nav>
+                <a href="/">Liste des cocktails</a>
+          </nav>
+        </div>
+    </header>
+    
     <main class="error">
         <p>Eh !...<span>Arrêtes de boire, ce cocktail n'existe pas...</span></p>
-      <a href="/">Retourne à la liste de cocktail</a>
-      </main>
+    </main>
     
-</body>
+
 
 <%- include('partials/footer') %>

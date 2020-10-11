@@ -3,21 +3,29 @@
 }) %>
 
 <body>
-    <nav>
-          <a href="/">Liste des cocktails</a>
-    </nav>
+    <header>
+        <div class="header">
+            <img src="https://www.neondesigns.nl/media/neon-catalog-teaser.jpg" alt="logo cocktail" class="logo">
+            <h1 class="title-header">MAKE YOUR COCKTAIL</h1>
+            <nav>
+                <a href="/">Liste des cocktails</a>
+            </nav>
+        </div>
+    </header>
 
-    <section class="cocktails">
-      <h1>Cocktails</h1>
-      <div class="box">
-          <% listOfTypes.forEach(cocktail => { %>
-              <div class="boxDetail">
-                  <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>"></a>
-                  <h3><%= cocktail.name %></h3>
-              </div>
-          <% }); %>
-      </div>
-  </section>
-</body>
+    <div class="cocktails-container">
+        <h1>Cocktails</h1>
+        <section class="cocktails">
+            <div class="box">
+                <% listOfTypes.forEach(cocktail => { %>
+                <div class="boxDetail">
+                    <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>" class="image"></a>
+                    <h3><%= cocktail.name %></h3>
+                </div>
+                <% }); %>
+            </div>
+        </section>
+    </div>
 
-<%- include('partials/footer') %>
+
+    <%- include('partials/footer') %>

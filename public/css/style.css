@@ -1,3 +1,52 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  height: 120px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.title-header {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px #00f0f3;
+  padding: 10px;
+  margin: 10px;
+}
+
+.selection {
+  align-self: center;
+  display: inline;
+}
+
+.type {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+#type-select {
+  background-color: #fff;
+  height: 30px;
+  border-radius: 3px;
+}
+
 nav {
   margin: 20px;
   padding: 20px;
@@ -6,33 +55,45 @@ nav {
 nav a {
   color: #000;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0 2px 3px #000;
+  box-shadow: 0 2px 2px #00f0f3;
   font-weight: bolder;
   text-decoration: none;
   padding: 10px;
+  margin: 10px;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #000;
+  box-shadow: 0 3px 3px #00f0f3;
 }
 
 h1 {
   text-align: center;
   font-size: 3em;
   font-weight: bold;
-  text-shadow: 3px 3px 3px #ccc;
+  /* text-shadow: 3px 3px 3px #ccc; */
 }
 
 h2 {
   text-decoration: underline;
 }
 
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.cocktails-container {
+  width: 100%;
 }
 
-img {
+.box {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 400px;
+}
+
+.image {
   width: 200px;
   height: 200px;
   border: 3px solid #000;
@@ -42,7 +103,7 @@ img {
   filter: grayscale(0) blur(0);
   transition: all 0.5s ease;
 }
-img:hover {
+.image:hover {
   border-radius: 50%;
   transform: rotate(360deg);
 
@@ -65,7 +126,7 @@ ul {
 
 .error {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url(https://i.ytimg.com/vi/_PmBL3YX1dc/maxresdefault.jpg);
     background-size: cover;
     background-position: center;
@@ -81,26 +142,15 @@ ul {
     text-transform: uppercase;
     color: #fff;
   }
-  .error a {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: .5rem;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px #000;
-    margin-left: 10%;
-  }
-  .error a:hover {
-    box-shadow: 0 1px 1px #000;
-  }
-
+  
   footer {
     color: #fff;
     font-size:.5em;
     background-color: #000;
-    height: 60px;
+    height: 40px;
+    padding: 10px;
   }
   .footer {
-    padding: 10px;
     margin: 10px;
     text-align: center;
   }

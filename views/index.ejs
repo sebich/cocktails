@@ -1,34 +1,35 @@
 <%- include('partials/header', {
     title: 'Liste cocktails'
 }) %>
-
 <body>
-    <section class="cocktails">
-        <h1>Cocktails</h1>
+    <header>
+        <div class="header">
+            <img src="https://www.neondesigns.nl/media/neon-catalog-teaser.jpg" alt="logo cocktail" class="logo">
+            <h1 class= "title-header">MAKE YOUR COCKTAIL</h1>
+            <div class="selection">
+                <label class= "type" for="type-select">Choisissez un type : 
+                    <select name="type" id="type-select" onchange = "location=this.value">
+                        <option value ="">--SVP choisissez une option--</option>
+                        <% cocktails.forEach(cocktail => { %>
+                        <option value ="type/<%= cocktail.type %>"><%= cocktail.type %></option>
+                        <% }); %>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </header>
+
+<div class="cocktails-container">
+    <h1>Cocktails</h1>
+    <section class="cocktails">   
         <div class="box">
             <% cocktails.forEach(cocktail => { %>
                 <div class="boxDetail">
-                    <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>"></a>
+                    <a href="cocktail/<%= cocktail.name %>"><img src="<%= cocktail.img %>" class= "image"></a>
                     <h3><%= cocktail.name %></h3>
                 </div>
             <% }); %>
         </div>
     </section>
-    <section>
-        <h1>Types</h1>
-
-        <ul>
-            <% cocktails.forEach(cocktail => { %>
-            <% const type = [cocktail.type]%>
-            <% console.log (type) %>
-            <% const type2 = []; %>
-            <% const arrayType = type.concat(type2); %>
-            <% console.log (arrayType) %>
-            <li><a href="type/<%= cocktail.type %>"><%= cocktail.type %></a></li>
-            <% }); %>
-
-        </ul>
-    </section>
-</body>
-
+</div> 
 <%- include('partials/footer') %>

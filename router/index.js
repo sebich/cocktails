@@ -35,9 +35,12 @@ router.get('/cocktail/:id', (request, response) => {
 router.get('/type/:typeName', (request, response) => {
     const typeName = request.params.typeName;
 
-    const listOfTypes = cocktails.filter(cocktail => {
-        return cocktail.type === typeName
-    });
+    
+    const listOfTypes = cocktails.filter(cocktail => cocktail.type === typeName);
+    // const typesList = new Set();  
+    // cocktails.forEach(cocktail => { 
+    // typesList.add(cocktail.type) 
+    // }); 
     
     // console.log(listOfTypes)
     if (!listOfTypes) {
@@ -47,6 +50,7 @@ router.get('/type/:typeName', (request, response) => {
 
     response.render('type', {
         listOfTypes,
+        // typesList
     });
 });
 
