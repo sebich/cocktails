@@ -10,8 +10,8 @@
                 <label class= "type" for="type-select">Choisissez un type : 
                     <select name="type" id="type-select" onchange = "location=this.value">
                         <option value ="">--SVP choisissez une option--</option>
-                        <% cocktails.forEach(cocktail => { %>
-                        <option value ="type/<%= cocktail.type %>"><%= cocktail.type %></option>
+                        <% typesList.forEach(type => { %>
+                        <option value ="type/<%= type %>"><%= type %></option>
                         <% }); %>
                     </select>
                 </label>
