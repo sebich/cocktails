@@ -71,18 +71,29 @@ nav a:hover {
 }
 
 h1 {
+  color: #fff;
   text-align: center;
   font-size: 3em;
   font-weight: bold;
-  /* text-shadow: 3px 3px 3px #ccc; */
+  text-shadow: 1px 1px 1px #000;
 }
 
 h2 {
+  color: #fff;
   text-decoration: underline;
+  text-shadow: 1px 1px 1px #000;
+}
+h3 {
+  color:#fff;
+  text-shadow: 1px 1px 1px #000;
 }
 
-.cocktails-container {
-  width: 100%;
+.container{
+  padding: 20px 0 20px 0;
+  background-image: url(https://educalcool.qc.ca/wp-content/uploads/2019/09/EDC-Outils-Tableau-de-bar-Image-a-la-une-1.png);
+  background-size: cover;
+  background-position: center;
+  /* opacity: .5; */
 }
 
 .box {
@@ -120,8 +131,10 @@ h2 {
 }
 
 ul {
+  color:#fff;
   text-align: center;
   list-style-position: inside;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .error {
